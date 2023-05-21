@@ -8,13 +8,23 @@ public class SlotScript : MonoBehaviour, IDropHandler
 {
     public int id;
     [SerializeField] private List<TYPES> a;
+    [SerializeField] private List<int> b;
     private List<int> answers = new List<int>();
     private List<TYPES> potentialAnswers = new List<TYPES>();
+    private List<bool> results = new List<bool>();
     private QuizAnswers correctAnswers;
     private bool submit = false;
-    private bool result = false;
+    public bool result = false;
     [SerializeField] private int correctNeeded = 0;
     public bool done = false;
+
+void Start()
+{
+    if (id == 3)
+    {
+        result = true;
+    }
+}
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -28,14 +38,60 @@ public class SlotScript : MonoBehaviour, IDropHandler
                 return;
             }
 
+            if (id == 3)
+            {
+                result = false;
+                return;
+            }
+            answers.Add(x.id);
+            /*
             answers.Add(x.id);
             this.potentialAnswers.Add(x.group);
             Debug.Log(answers[id]);
             Debug.Log(potentialAnswers[id]);
-            id ++;
+            id ++;*/
+            Debug.Log("========");
+            //Debug.Log(b.Count);
+            foreach (int answer in answers)
+            {
+                Debug.Log(answer);
+            }
+            /*if (TYPES.COMPUTER == (TYPES) 2)
+            {
+                Debug.Log("ENUMS works?");
+            }*/
+            Debug.Log("========");
+            foreach (int answer in b)
+            {
+                //Debug.Log(answer);
+                if (answers.Contains(answer))
+                {
+                    Debug.Log("here");
+                    results.Add(true);
+                    continue;
+                }
+                results.Add(false);
+            }
+            if (results.Contains(false))
+            {
+                result = false;
+            }
+            else
+            {
+                result = true;
+            }
+            Debug.Log("=========");
+            foreach (bool r in results)
+            {
+                Debug.Log(r);
+            }
+            Debug.Log("========");
+            results = new List<bool>();
+            Debug.Log(result);
          }
     }
-
+}
+    /*
     public void SetSubmit(bool value)
     {
         this.submit = value;
@@ -62,5 +118,5 @@ public class SlotScript : MonoBehaviour, IDropHandler
             this.submit = false;
             this.done = true;
         }
-    }
-}
+    }*/
+

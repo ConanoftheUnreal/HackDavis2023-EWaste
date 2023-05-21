@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class QuizResult: MonoBehaviour
 {
@@ -10,21 +11,41 @@ public class QuizResult: MonoBehaviour
     [SerializeField] private GameObject location3;
     [SerializeField] private GameObject location4;
     [SerializeField] private GameObject location5;
+    [SerializeField] private GameObject fail;
+    [SerializeField] private GameObject success;
+    [SerializeField] private GameObject button;
+    [SerializeField] private Canvas myCanvas;
+    private List<bool> result = new List<bool>();
     private int totalResult = 0;
     private bool flag = false;
 
     public void CalcResult()
     {
-        location0.GetComponent<SlotScript>().SetSubmit(true);
-        location1.GetComponent<SlotScript>().SetSubmit(true);
-        location2.GetComponent<SlotScript>().SetSubmit(true);
-        location3.GetComponent<SlotScript>().SetSubmit(true);
-        location4.GetComponent<SlotScript>().SetSubmit(true);
-        location5.GetComponent<SlotScript>().SetSubmit(true);
-        this.flag = true;
+        GameObject x;
+        result.Add(location0.GetComponent<SlotScript>().result);
+        result.Add(location1.GetComponent<SlotScript>().result);
+        result.Add(location2.GetComponent<SlotScript>().result);
+        result.Add(location3.GetComponent<SlotScript>().result);
+        result.Add(location5.GetComponent<SlotScript>().result);
+        result.Add(location4.GetComponent<SlotScript>().result);
+        if (result.Contains(false))
+        {
+            Debug.Log("fail");
+            x = Instantiate(fail);
+            x.transform.SetParent(myCanvas.transform, false);
+        }
+        else
+        {
+            Debug.Log("success");
+            x = Instantiate(success);
+            x.transform.SetParent(myCanvas.transform, false);
+        }
+        SceneManager.LoadScene("ExitView");
+        //x = Instantiate(button);
+        //x.transform.SetParent(myCanvas.transform, false);
     }
 
-    void Update()
+    /*void Update()
     {
         this.totalResult = 0;
         if (this.flag && location0.GetComponent<SlotScript>().done && location5.GetComponent<SlotScript>().done &&
@@ -82,5 +103,5 @@ public class QuizResult: MonoBehaviour
         //{
         //    totalResult ++;
         //}
-    }
+    }*/
 }

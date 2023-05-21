@@ -613,8 +613,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dfd334ff3496bd45a8e0787a241ad99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 4
   a: 04000000
+  b: 04000000
+  result: 0
   correctNeeded: 1
   done: 0
 --- !u!114 &390497313
@@ -746,6 +748,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   a: 03000000020000000700000005000000
+  b: 02000000030000000500000007000000
+  result: 0
   correctNeeded: 4
   done: 0
 --- !u!1001 &457191225
@@ -926,8 +930,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dfd334ff3496bd45a8e0787a241ad99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 5
   a: 000000000200000003000000
+  b: 000000000200000003000000
+  result: 0
   correctNeeded: 3
   done: 0
 --- !u!114 &676001695
@@ -1019,8 +1025,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dfd334ff3496bd45a8e0787a241ad99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 3
   a: 
+  b: 
+  result: 0
   correctNeeded: 0
   done: 0
 --- !u!114 &965043011
@@ -1112,8 +1120,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dfd334ff3496bd45a8e0787a241ad99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 1
   a: 0300000002000000
+  b: 0200000003000000
+  result: 0
   correctNeeded: 2
   done: 0
 --- !u!114 &1081638636
@@ -1205,8 +1215,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dfd334ff3496bd45a8e0787a241ad99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 2
   a: 0700000001000000
+  b: 0700000001000000
+  result: 0
   correctNeeded: 2
   done: 0
 --- !u!114 &1101257238
@@ -1412,6 +1424,10 @@ MonoBehaviour:
   location3: {fileID: 965043008}
   location4: {fileID: 390497310}
   location5: {fileID: 676001692}
+  fail: {fileID: 174919060313169825, guid: 830c0e5ac0c3c5ec096e37deda05d57e, type: 3}
+  success: {fileID: 8480433558045232589, guid: 2ff696336251d2d2b89eba0b99da4dfe, type: 3}
+  button: {fileID: 2977699290275884707, guid: 899b113149e0330aa9352218ee4c8897, type: 3}
+  myCanvas: {fileID: 1211993462}
 --- !u!4 &1628195843
 Transform:
   m_ObjectHideFlags: 0

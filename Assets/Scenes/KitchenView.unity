@@ -1044,7 +1044,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1370461067}
-        m_TargetAssemblyTypeName: ExitButton, Assembly-CSharp
+        m_TargetAssemblyTypeName: QuizButton, Assembly-CSharp
         m_MethodName: ClickRoom
         m_Mode: 1
         m_Arguments:
@@ -1178,13 +1178,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &1370461067 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3997670968632109342, guid: 3875f11d8c0b488f8b00971db9cade13, type: 3}
+  m_CorrespondingSourceObject: {fileID: 637204924593055445, guid: 3875f11d8c0b488f8b00971db9cade13, type: 3}
   m_PrefabInstance: {fileID: 1370461064}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a2940b5eb320f8baacd7cb25a84a5cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 45014b3af4a306a95a5855f8a4be4418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1439752579

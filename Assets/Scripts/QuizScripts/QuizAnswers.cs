@@ -11,6 +11,7 @@ namespace Answers
         private List<TYPES> answers;
         private int correctNeeded;
 
+/*
         public QuizAnswers (List<TYPES> answers, int correctNeeded)
         {
             this.answers = new List<TYPES>(answers);
@@ -42,5 +43,6 @@ namespace Answers
             }
             return true;
         }
+    }*/
     }
 }

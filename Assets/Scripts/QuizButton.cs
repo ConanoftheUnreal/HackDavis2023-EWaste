@@ -7,6 +7,6 @@ public class QuizButton : MonoBehaviour
 {
     public void ClickRoom()
     {
-        SceneManager.LoadScene("QuizView");
+        SceneManager.LoadScene("Quiz");
     }
 }
